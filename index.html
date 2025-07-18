@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subroto (Shubh) Ram Bayda - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light Slate 50 */
+            color: #1e293b; /* Slate 900 */
+        }
+        /* Custom styles for better aesthetics */
+        .btn-primary {
+            background-image: linear-gradient(to right, #6366f1, #8b5cf6); /* Indigo 500 to Violet 500 */
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-image: linear-gradient(to right, #4f46e5, #7c3aed); /* Indigo 600 to Violet 600 */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+        }
+        .card {
+            background-color: #ffffff;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .navbar-link:hover {
+            color: #6366f1; /* Indigo 500 */
+        }
+        /* Animation for hero section elements */
+        @keyframes fadeInFromBottom {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInFromBottom 0.8s ease-out forwards;
+        }
+        .animate-fade-in-up.delay-200 {
+            animation-delay: 0.2s;
+        }
+        .animate-fade-in-up.delay-400 {
+            animation-delay: 0.4s;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-sm py-4 px-6 md:px-12 fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-indigo-600 rounded-lg p-2">Subroto Bayda</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <!-- Navigation Links (Desktop) -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="navbar-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2">Home</a>
+                <a href="#about" class="navbar-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2">About</a>
+                <a href="#skills" class="navbar-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2">Skills</a>
+                <a href="#projects" class="navbar-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2">Projects</a>
+                <a href="#contact" class="navbar-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2">Contact</a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-white rounded-lg shadow-md py-2">
+            <a href="#home" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Home</a>
+            <a href="#about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md">About</a>
+            <a href="#skills" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Skills</a>
+            <a href="#projects" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Projects</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-24 md:py-32 flex items-center justify-center min-h-screen-75">
+        <div class="container mx-auto px-6 md:px-12 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
+                Subroto (Shubh) Ram Bayda
+            </h1>
+            <p class="text-lg md:text-xl mb-6 max-w-3xl mx-auto opacity-90 animate-fade-in-up delay-200">
+                Experienced Technical Support Lead | Experienced UI/UX design | Expertise in AI & Deep Learning | Recognized in ICPC & NCPC Programming
+            </p>
+            <p class="text-md md:text-lg mb-8 opacity-80 animate-fade-in-up delay-300">
+                Ulster University | Birmingham, England, United Kingdom
+                <br>
+                <a href="https://suvrowp.wordpress.com" target="_blank" rel="noopener noreferrer" class="text-white hover:underline">suvrowp.wordpress.com</a>
+            </p>
+            <div class="space-x-4 animate-fade-in-up delay-400">
+                <a href="#projects" class="btn-primary inline-block px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+                    View My Work
+                </a>
+                <a href="#contact" class="inline-block bg-white text-indigo-600 px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-800">About Me</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
+                I am a seasoned UI/UX designer with a strong background in technical support and a deep passion for artificial intelligence and deep learning. With years of experience in the industry, I have honed my skills in designing user-friendly interfaces and providing top-notch technical assistance to clients.
+            </p>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
+                My A.I. and deep learning expertise have allowed me to stay at the forefront of technological advancements and implement cutting-edge solutions for various projects. I constantly seek new challenges and opportunities to expand my knowledge and skills in this rapidly evolving field.
+            </p>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
+                I take great pride in being recognized in the International Collegiate Programming Contest (I.C.P.C.) and National Collegiate Programming Contest (NCPC) for my exceptional programming abilities. This has enhanced my problem-solving skills and instilled a strong sense of discipline and attention to detail in my work.
+            </p>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                As a diligent and dedicated professional, I am committed to delivering high-quality results and exceeding expectations. I thrive in fast-paced environments and continually seek ways to improve processes and streamline workflows. My goal is to contribute my expertise and collaborate with like-minded individuals and organizations to create innovative solutions that make a positive impact. I am open to networking and exploring new opportunities in UI/UX design and technical support.
+            </p>
+            <div class="mt-12 flex justify-center space-x-6">
+                <a href="https://dribbble.com/Subrotosuvro" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 text-lg font-semibold transition duration-300">
+                    Dribbble Profile
+                </a>
+                <a href="https://github.com/suvro1999" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 text-lg font-semibold transition duration-300">
+                    GitHub Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-800">My Skills</h2>
+            <div class="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
+                <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-lg font-medium shadow-sm">UI/UX Design</span>
+                <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-lg font-medium shadow-sm">Graphic Design</span>
+                <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-lg font-medium shadow-sm">Research Assistant</span>
+                <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-lg font-medium shadow-sm">Software Testing</span>
+                <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-lg font-medium shadow-sm">Web Development</span>
+                <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-lg font-medium shadow-sm">WordPress Development</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">My Projects & Work</h2>
+            <p class="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-10">
+                I have completed 20+ web templates, 14+ mobile app projects, and 100+ graphic projects. Additionally, I have worked on 2+ projects as a research assistant and performed two software tests on Fiverr.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1: Sample Website -->
+                <div class="card p-6 rounded-xl text-center">
+                    <img src="https://placehold.co/400x250/e0e7ff/4338ca?text=Web+Template" alt="Web Template Project" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-700">Sample Web Template</h3>
+                    <p class="text-gray-600 mb-4">A responsive web template showcasing design and development skills.</p>
+                    <a href="https://suvro1999.github.io/Task-1/" target="_blank" rel="noopener noreferrer" class="btn-primary inline-block px-6 py-2 rounded-full text-sm font-semibold text-white">View Project</a>
+                </div>
+
+                <!-- Project Card 2: Personal Portfolio -->
+                <div class="card p-6 rounded-xl text-center">
+                    <img src="https://placehold.co/400x250/e0e7ff/4338ca?text=Portfolio" alt="Personal Portfolio Project" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-700">Personal Portfolio</h3>
+                    <p class="text-gray-600 mb-4">A dedicated portfolio site highlighting various design and development works.</p>
+                    <a href="https://suvro1999.github.io/suvro/" target="_blank" rel="noopener noreferrer" class="btn-primary inline-block px-6 py-2 rounded-full text-sm font-semibold text-white">View Project</a>
+                </div>
+
+                <!-- Project Card 3: Lawyer's Office Site -->
+                <div class="card p-6 rounded-xl text-center">
+                    <img src="https://placehold.co/400x250/e0e7ff/4338ca?text=Lawyer+Site" alt="Lawyer Office Website" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-700">Lawyer's Office Website</h3>
+                    <p class="text-gray-600 mb-4">A professional website developed for a lawyer's office.</p>
+                    <a href="http://dhakaleagepra.atwebpages.com/" target="_blank" rel="noopener noreferrer" class="btn-primary inline-block px-6 py-2 rounded-full text-sm font-semibold text-white">View Project</a>
+                </div>
+
+                <!-- Project Card 4: WordPress Site 1 -->
+                <div class="card p-6 rounded-xl text-center">
+                    <img src="https://placehold.co/400x250/e0e7ff/4338ca?text=WordPress+Site+1" alt="WordPress Site 1" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-700">WordPress Project 1</h3>
+                    <p class="text-gray-600 mb-4">A versatile WordPress site demonstrating custom development.</p>
+                    <a href="https://suvro35035.wordpress.com" target="_blank" rel="noopener noreferrer" class="btn-primary inline-block px-6 py-2 rounded-full text-sm font-semibold text-white">View Project</a>
+                </div>
+
+                <!-- Project Card 5: WordPress Site 2 -->
+                <div class="card p-6 rounded-xl text-center">
+                    <img src="https://placehold.co/400x250/e0e7ff/4338ca?text=WordPress+Site+2" alt="WordPress Site 2" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-700">WordPress Project 2</h3>
+                    <p class="text-gray-600 mb-4">Another example of a custom-built WordPress website.</p>
+                    <a href="https://suvrowp.wordpress.com" target="_blank" rel="noopener noreferrer" class="btn-primary inline-block px-6 py-2 rounded-full text-sm font-semibold text-white">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-800">Get in Touch</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
+                Have a question or want to start a project? Feel free to reach out to me!
+            </p>
+            <form class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                <div class="mb-6">
+                    <input type="text" placeholder="Your Name" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200" required>
+                </div>
+                <div class="mb-6">
+                    <input type="email" placeholder="Your Email" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200" required>
+                </div>
+                <div class="mb-6">
+                    <textarea placeholder="Your Message" rows="6" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full px-8 py-4 rounded-full text-lg font-semibold text-white shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 md:px-12 text-center">
+            <p class="text-gray-400">&copy; 2025 Subroto (Shubh) Ram Bayda. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
